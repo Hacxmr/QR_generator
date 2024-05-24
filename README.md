@@ -1,2 +1,4 @@
-#To Run the Program
+# QR Generator
+
+## Setup
 python main.py
