@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>QR Code</title>
+    </head>
+    <body>
+        <div class='title'>
+            <h1>QR Code Generator</h1>
+            <h2>Insert a link to generate a QR Code</h2>
+        </div>
+        <form action='/' method="POST">
+            <input type="text" name="link" placeholder="Enter the URL ">
+            <button type="submit">Generate QR</button>
+        </form>
+        {% if data %}
+        <div class="generated">
+            <img src="{{data}}" alt="" />
+        </div>
+        {% endif %}
+    </body>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            background-color:#987070;
+        
+        }
+        
+        html,body{
+            margin:0rem 10rem;
+            font-family:"Poppins",sans-serif;
+           
+        }
+        
+        .title{
+            padding:6rem;
+            display:flex;
+            flex-direction:column;
+            gap:2rem;
+            justify-content:center;
+            align-items:center;
+            color:rgb(37,37,37);
+         
+        }
+        .title h1{
+            display:flex;
+            font-size: 5rem;
+            font-weight:bold;
+        }
+
+        .title h2{
+            display:flex;
+            font-size:2.5rem;
+            color:#F1E5D1;
+            margin-top:100px;
+        }
+
+        form{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:2rem;
+        }
+        form input{
+            font-input:1.2rem;
+            padding:1rem 1rem;
+            width:50%;
+            background-color:F1E5D1;
+            border-radius:0.5rem;
+            color:white;
+            border:none;
+            font-size:1rem;
+        }
+
+        form button{
+            font-size:1rem;
+            background:rgb(41,64,121);
+            border:none;
+            color:white;
+            padding:1rem 1.5rem;
+            cursor:pointer;
+            border-radius:0.5rem;
+        }
+
+        .generated{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            margin-top:5rem;
+            color:F1E5D1;
+        }
+
+    </style>
+</html>
+
